@@ -60,6 +60,7 @@
 		led0 = &led_status;
 		sw0 = &dfu_button;
 		watchdog0 = &iwdg;
+		usbc-port0 = &port1;
 	};
 };
 
