@@ -24,12 +24,6 @@ jobs:
           west init .
           west update -o=--depth=1 -n
 
-      - name: Create submanifest
-        run: |
-          pwd
-          ls -lah
-          cp otterpill_zephyr/.github/workflows/otterpill_submanifest.yaml zephyr/submanifests/
-
       - name: Build blinky sample for otterpill
         run: |
-          west twister --build-only --inline-logs --test samples/basic/blinky/sample.basic.blinky --platform otterpill
+          west twister --build-only --inline-logs --test samples/basic/blinky/sample.basic.blinky --platform otterpill --force-platform --board-root otterpill_zephyr/boards
