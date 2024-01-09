@@ -19,11 +19,15 @@ jobs:
 
       - name: Initialize
         run: |
+          pwd
+          ls -lah
           west init .
           west update -o=--depth=1 -n
 
       - name: Create submanifest
         run: |
+          pwd
+          ls -lah
           cp otterpill_zephyr/.github/workflows/otterpill_submanifest.yaml zephyr/submanifests/
 
       - name: Build blinky sample for otterpill
