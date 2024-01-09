@@ -1,0 +1,4 @@
+manifest:
+  projects:
+    - name: otterpill_zephyr2
+      url: "no"

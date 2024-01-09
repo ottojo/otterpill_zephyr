@@ -18,12 +18,14 @@ jobs:
           path: otterpill_zephyr
 
       - name: Initialize
-        working-directory: otterpill_zephyr
         run: |
-          west init -l .
+          west init .
           west update -o=--depth=1 -n
 
+      - name: Create submanifest
+        run: |
+          cp otterpill_zephyr/.github/workflows/otterpill_submanifest.yaml zephyr/submanifests/
+
       - name: Build blinky sample for otterpill
-        #working-directory: example-application
         run: |
           west twister --build-only --inline-logs --test samples/basic/blinky/sample.basic.blinky --platform otterpill
