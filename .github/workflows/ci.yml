@@ -26,4 +26,4 @@ jobs:
 
       - name: Build blinky sample for otterpill
         run: |
-          west twister --build-only --inline-logs --testsuite-root zephyr/samples --platform otterpill --board-root otterpill_zephyr/boards
+          west twister --build-only --inline-logs --test samples/basic/blinky/sample.basic.blinky --platform otterpill --force-platform --board-root otterpill_zephyr/boards
