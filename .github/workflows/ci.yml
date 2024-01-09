@@ -24,9 +24,9 @@ jobs:
           west init .
           west update -o=--depth=1 -n
 
-      - name: Build blinky sample for otterpill
+      - name: Build samples for otterpill
         env:
           EXTRA_ZEPHYR_MODULES: ${{ github.workspace }}/otterpill_zephyr
         run: |
           echo $EXTRA_ZEPHYR_MODULES
-          west twister --build-only --inline-logs --test samples/basic/blinky/sample.basic.blinky --platform otterpill --force-platform --board-root otterpill_zephyr/boards
+          west twister --build-only --inline-logs --testsuite-root zephyr/samples --platform otterpill --board-root otterpill_zephyr/boards
