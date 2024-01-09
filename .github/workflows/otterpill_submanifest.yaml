@@ -1,4 +1,4 @@
 manifest:
   projects:
-    - name: otterpill_zephyr2
+    - name: otterpill_zephyr
       url: "no"
