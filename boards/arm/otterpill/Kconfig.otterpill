@@ -2,5 +2,4 @@
 # SPDX-License-Identifier: Apache-2.0
 
 config BOARD_OTTERPILL
-	bool "OtterPill Board"
-	depends on SOC_STM32F072X8
+	select SOC_STM32F072X8

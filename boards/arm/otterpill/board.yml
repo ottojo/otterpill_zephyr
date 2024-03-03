@@ -1,0 +1,5 @@
+board:
+  name: otterpill
+  vendor: Jana-Marie
+  socs:
+    - name: stm32f072x8
