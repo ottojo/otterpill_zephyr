@@ -2,4 +2,5 @@ board:
   name: otterpill
   vendor: Jana-Marie
   socs:
-    - name: stm32f072x8
+    # Actually stm32f072x8, but the difference is only in amount of flash, which is specified in the devicetree.
+    - name: stm32f072xb
